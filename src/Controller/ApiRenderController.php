@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace Valantic\PimcoreApiDocumentationBundle\Controller;
 
 use Nelmio\ApiDocBundle\Render\Html\AssetsMode;
-use Pimcore\Controller\FrontendController;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Valantic\PimcoreApiDocumentationBundle\Exception\UnableToDisplayDocumentation;
 
-class ApiRenderController extends FrontendController
+class ApiRenderController extends AbstractController
 {
     #[Route('%valantic.pimcore_api_doc.docs_route%')]
     public function renderApi(
