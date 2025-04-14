@@ -23,7 +23,7 @@ class Configuration implements ConfigurationInterface
             ->children()
             ->scalarNode('base_docs_path')
             ->cannotBeEmpty()
-            ->defaultValue(sprintf('%s/config/api-docs/docs.yaml', PIMCORE_PROJECT_ROOT))
+            ->defaultValue('%kernel.project_dir%/config/api-docs/docs.yaml')
             ->end()
             ->scalarNode('docs_route')
             ->cannotBeEmpty()
